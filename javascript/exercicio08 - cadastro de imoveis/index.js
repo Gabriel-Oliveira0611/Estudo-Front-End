@@ -1,97 +1,84 @@
+let imoveis = [];
+
 function cadastrarImovel(
+  nomeImovel,
   nomeProprietario,
   quantidadeQuartos,
   quantidadeBanheiros,
   possuiGaragem,
 ) {
   return {
-    nomeProprietario,
-    quantidadeQuartos,
-    quantidadeBanheiros,
-    possuiGaragem,
+    nomeImovel: nomeImovel,
+    nomeProprietario: nomeProprietario,
+    quantidadeQuartos: quantidadeQuartos,
+    quantidadeBanheiros: quantidadeBanheiros,
+    possuiGaragem: possuiGaragem,
 
-    exibirDados: function () {
-      console.log(`-> Nome do proprietário: ${this.nomeProprietario}`);
-      console.log(`-> Quanidade de quartos: ${this.quantidadeQuartos}`);
-      console.log(`-> Quantidade de banheiros: ${this.quantidadeBanheiros}`);
-      console.log(`-> Possui garagem? ${this.possuiGaragem}`);
+    esibirDados: function () {
+      alert(`
+        -> Nome do imóvel: ${this.nomeImovel}
+        --> Nome do proprietário: ${this.nomeProprietario}
+        --> Quantidade de quartos: ${this.quantidadeQuartos}
+        --> Quantidade de banheiros: ${this.quantidadeBanheiros}
+        --> Possui garagem? ${this.possuiGaragem}
+        `);
+    },
+
+    salvarImovel: function () {
+      imoveis.push(this);
     },
   };
 }
 
-// Criação de imóveis de exemplo
-const imovel1 = cadastrarImovel("Gabriel", 2, 2, "Sim");
-const imovel2 = cadastrarImovel("Paulo", 2, 1, "Sim");
-const imovel3 = cadastrarImovel("Rogério", 1, 1, "Não");
-
-// Criação do array com todos os imóveis
-let imoveis = [imovel1, imovel2, imovel3];
-
-// Menu interativo
 let escolha = "";
 
 do {
-  for (let i = 0; i < imoveis.length; i++) {
-    quantidadeImoveis = i + 1;
-  }
+  escolha = prompt(`
+    Seja muito bem-vindo ao cadastro de imóveis!
+    Total de imóveis cadastrados: ${imoveis.length}
 
-  if (quantidadeImoveis >= 2) {
-    escolha = prompt(
-      `Seja muito bem-vindo ao cadstro de imóveis!
-        Total de imóveis cadastrados: ${quantidadeImoveis} imóveis.
-        
-        Escolha uma das opções abaixo:
-        -> 1: Salvar um imóvel
-        -> 2: Mostar imóveis salvos.
-        -> 3: Sair`,
-    );
-  } else {
-    escolha = prompt(
-      `Seja muito bem-vindo ao cadstro de imóveis!
-        Total de imóveis cadastrados: ${quantidadeImoveis} imóvel
-        
-        Escolha uma das opções abaixo:
-        -> 1: Salvar um imóvel
-        -> 2: Mostar imóveis salvos.
-        -> 3: Sair`,
-    );
-  }
+    Escolha uma das opções abaixo:
+    -> 1: Cadastrar imóvel
+    -> 2: Imóveis cadastrados
+    -> 3: Sair
+    `);
 
   switch (escolha) {
     case "1":
-      let nomeImovel = prompt("Qual é o nome do imóvel?");
-      let nomeProprietario = prompt("Qual é o nome do proprietário do imóvel?");
-      let quantidadeQuartos = parseInt(
-        prompt("Qual é a quantidade de quartos do imóvel?"),
+      let imovelCadastrado = cadastrarImovel(
+        prompt("Qual é o nome do imóvel?"),
+        prompt("Qual é o nome do proprietário?"),
+        Number(prompt("Qual é a quantidade de quartos do imóvel?")),
+        Number(prompt("Qual é a quantidade de banheiros do imóvel?")),
+        prompt("O imóvel possui garagem? (Sim/Não)"),
       );
-      let quantidadeBanheiros = parseInt(
-        prompt("Qual é a quantidade de banheiros do imóvel?"),
-      );
-      let possuiGaragem = prompt("O imóvel possui garagem? (Sim/Não)");
 
-      nomeImovel = cadastrarImovel();
-      imoveis.push(nomeImovel);
+      imovelCadastrado.salvarImovel();
       break;
 
     case "2":
       let exibicao = "";
-
-      function mostrarImoveis() {
-        for (let contador = 0; contador < imoveis.length; contador++) {
-          exibicao += alert(
-            `Segue abaixo os dados dos imóveis cadastrados:
-      Total de imóveis: ${quantidadeImoveis}
-      
-      -> Nome do imóvel: ${imoveis[contador]}
-      --> Nome do proprietário: ${imoveis[contador].nomeProprietario}
-      --> Quantidade de quartos: ${imoveis[contador].quantidadeQuartos}
-      --> Quantidade de banheiros: ${imoveis[contador].quantidadeBanheiros}
-      --> Possui garagem? ${imoveis[contador].possuiGaragem}`,
-          );
-        }
+      for (let i = 0; i < imoveis.length; i++) {
+        exibicao += `
+        -> Nome do imóvel: ${imoveis[i].nomeImovel}
+        --> Nome do proprietário: ${imoveis[i].nomeProprietario}
+        --> Quantidade de quartos: ${imoveis[i].quantidadeQuartos}
+        --> Quantidade de banheiros: ${imoveis[i].quantidadeBanheiros}
+        --> Possui garagem? ${imoveis[i].possuiGaragem}
+        `;
       }
 
-      alert(mostrarImoveis())
+      alert(
+        `
+        Segue abaixo os dados dos imóveis cadastrados:
+
+        ${exibicao}
+        `,
+      );
+      break;
+
+    case "3":
+      alert("Encerrando o sistema...");
       break;
 
     default:
