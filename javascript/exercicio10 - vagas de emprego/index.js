@@ -1,24 +1,25 @@
 let vagas = [];
 
 function listarVagas() {
-  let vagasEmTexto = vagas.reduce(function (textoFinal, vaga, indice) {
-    textofinal += indice + ". ";
-    textoFinal += vaga.nome;
-    textoFinal += " (" + candiddos.length + "\n";
-
-    return textoFinal;
+  let resumoVagas = vagas.reduce(function (valorAcumulado, vaga, indice) {
+    valorAcumulado += indice + ". ";
+    valorAcumulado += vaga;
+    valorAcumulado += " (" + candidatos.length + ")\n";
+    return valorAcumulado;
   }, "");
 
-  alert(vagasEmTexto);
+  alert(resumoVagas);
 }
 
 function criarVaga() {
   let nome = prompt("Qual é o nome da vaga?");
   let descricao = prompt("Qual é a descrição da vaga?");
-  let dataLimite = prompt("Informe uma data limite. (dd/mm/aaaa) para a vaga");
+  let dataLimite = prompt("Qual é a data limite da vaga?");
+
   let confirmacao = confirm(
     `
-    Deseja criar uma nova vaga com as seguintes informações?
+    Deseja criar uma vaga com as seguintes informações?
+
     -> Nome: ${nome}
     -> Descrição: ${descricao}
     -> Data limite: ${dataLimite}
@@ -26,15 +27,13 @@ function criarVaga() {
   );
 
   if (confirmacao) {
-    let novaVaga = { nome, descricao, dataLimite, candidatos: [] };
+    let novaVaga = {
+      nome,
+      descricao,
+      dataLimite,
+      candidatos: [],
+    };
     vagas.push(novaVaga);
-    alert("vaga criada!");
+    alert("Vaga criada com sucesso!");
   }
-}
-
-function exibirVaga() {
-  let indice = prompt("Informe o indice da vaga que deseja exibir:");
-  let vaga = vagas[indice];
-
-  let candidatosEmTexto = vaga.candidatos.reduce(function())
 }
