@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container my-4">
+      <h1>
+        DOM - Sistema de notas
+
+        <table class="table table-responsive text-center">
+          <thead class="table-primary">
+            <tr>
+              <th>Nome</th>
+              <th>Nota 1</th>
+              <th>Nota 2</th>
+              <th>Nota 3</th>
+              <th>Média</th>
+            </tr>
+          </thead>
+          <tbody id="alunos">
+            <tr class="aluno" id="aluno-um">
+              <td class="nome">Aluno 1</td>
+              <td class="nota1">8.5</td>
+              <td class="nota2">8.0</td>
+              <td class="nota3">7.0</td>
+              <td class="media">0</td>
+            </tr>
+
+            <tr class="aluno" id="aluno-dois">
+              <td class="nome">Aluno 2</td>
+              <td class="nota1">6.0</td>
+              <td class="nota2">4.0</td>
+              <td class="nota3">3.0</td>
+              <td class="media">0</td>
+            </tr>
+
+            <tr class="aluno" id="aluno-tres">
+              <td class="nome">Aluno 3</td>
+              <td class="nota1">6.0</td>
+              <td class="nota2">6.5</td>
+              <td class="nota3">3.5</td>
+              <td class="media">0</td>
+            </tr>
+
+            <tr class="aluno" id="aluno-quatro">
+              <td class="nome">Aluno 4</td>
+              <td class="nota1">8.0</td>
+              <td class="nota2">10.0</td>
+              <td class="nota3">10.0</td>
+              <td class="media">0</td>
+            </tr>
+
+            <tr class="aluno" id="aluno-cinco">
+              <td class="nome">Aluno 5</td>
+              <td class="nota1">9.0</td>
+              <td class="nota2">9.5</td>
+              <td class="nota3">7.0</td>
+              <td class="media">0</td>
+            </tr>
+
+            <tr class="aluno" id="aluno-seis">
+              <td class="nome">Aluno 6</td>
+              <td class="nota1">4.0</td>
+              <td class="nota2">4.0</td>
+              <td class="nota3">5.0</td>
+              <td class="media">0</td>
+            </tr>
+          </tbody>
+
+          <tfoot>
+            <tr>
+              <td colspan="5" id="linha">
+                Sistema de notas - linha vermelha = notas abaixo da media
+              </td>
+            </tr>
+            <tr>
+              <td colspan="5" class="text-end">
+                <button class="btn btn-primary" id="calcular">
+                  Calcular média
+                </button>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </h1>
+    </div>
+    <!-- Link Javascript -->
+    <!-- <script src="./assets/js/index.js"></script> -->
+     <script src="./assets/js/calcularMedia.js"></script>
+  </body>
+</html>
