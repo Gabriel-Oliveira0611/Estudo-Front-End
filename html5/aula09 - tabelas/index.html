@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabelas</title>
+  </head>
+  <body>
+    <h1>Criação de tabelas</h1>
+    <table border="">
+      <tr>
+        <th>Coluna 1</th>
+        <th>Coluna 2</th>
+      </tr>
+      <tr>
+        <td>Dado 1</td>
+        <td>Dado 2</td>
+      </tr>
+      <tr>
+        <td>Dado 3</td>
+        <td>Dado 4</td>
+      </tr>
+    </table>
+
+    <hr />
+
+    <h2>Tabelas com cabeçalho</h2>
+    <table border="">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Idade</th>
+          <th>Profissão</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>João</td>
+          <td>30</td>
+          <td>Engenheiro</td>
+        </tr>
+        <tr>
+          <td>Maria</td>
+          <td>25</td>
+          <td>Advogada</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr />
+
+    <h2>Tabelas com células personalizadas</h2>
+
+    <table border="">
+      <thead>
+        <tr>
+          <th colspan="2">Informações pessoas</th>
+          <!-- Colspan determina a quantidade de colunas que uma td irá ocupar -->
+          <th>Contato</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Nome:</td>
+          <td>João</td>
+          <td rowspan="2">Telefone: 123456</td>
+          <!-- Rowspan determina a quantidade de linhas que uma td irá ocupar -->
+        </tr>
+        <tr>
+          <td>Idade:</td>
+          <td>30</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

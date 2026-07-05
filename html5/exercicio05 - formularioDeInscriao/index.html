@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de Inscrição</title>
+  </head>
+  <body>
+    <h1>Formulário de Inscrição</h1>
+
+    <form action="">
+      <label for="name">Nome completo:</label>
+      <br />
+      <input type="text" name="name" id="name" placeholder="nome..." required />
+
+      <br /><br />
+
+      <label for="dataDeNasicmento">Data de Nascimento:</label><br />
+      <input type="date" name="dataDeNasicmento" id="dataDeNasicmento" />
+
+      <br /><br />
+
+      <label for="email">E-mail:</label>
+      <br />
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="exemplo@email.com"
+        required
+      />
+
+      <br /><br />
+
+      <label for="whatsapp">WhatsApp:</label>
+      <br />
+      <input
+        type="tel"
+        name="whatsapp"
+        id="whatsapp"
+        placeholder="xxxx-xxxx"
+        required
+      />
+
+      <br /><br />
+
+      <label>Área de Atuação</label>
+      <br />
+
+      <input
+        type="radio"
+        name="atuacao"
+        id="desenvolvimento"
+        value="desenvovimento"
+      />
+      <label for="desenvolvimento">Desenvolvimento</label>
+
+      <input type="radio" name="atuacao" id="QA" value="quality assurance" />
+      <label for="QA">Quality Assurance (QA)</label>
+
+      <input type="radio" name="atuacao" id="dados" value="analise de dados" />
+      <label for="dados">Análise de Dados</label>
+
+      <input type="radio" name="atuacao" id="infra" value="infraestrutura" />
+      <label for="infra">Infraestrutura</label>
+
+      <br /><br />
+
+      <label for="faculdade">Faculdade</label> <br />
+      <select name="faculdade" id="faculdade">
+        <option value="" disabled selected>
+          Em qual faculdade você estudou?
+        </option>
+        <option value="FIAP">FIAP</option>
+        <option value="Uninove">UniNove</option>
+        <option value="FATEC">FATEC</option>
+        <option value="anhanguera">Anhanguera</option>
+        <option value="usp">USP</option>
+        <option value="metodista">Metodista</option>
+        <option value="mckenzie">mackenzie</option>
+      </select>
+
+      <br /><br />
+
+      <label for="obs">Observações:</label><br />
+      <textarea
+        name="obs"
+        id="obs"
+        cols="30"
+        rows="6"
+        placeholder="Insira algumas observações..."
+      ></textarea>
+
+      <br /><br />
+
+      <input type="checkbox" name="news" id="news" />
+      <label for="news">Desejo receber novidades e ofertas por e-mail</label>
+
+      <br /><br />
+
+      <label for="foto">Envie sua foto de perfil</label><br />
+      <input type="file" name="foto" id="foto" />
+
+      <br /><br />
+
+      <button type="submit">Enviar</button>
+    </form>
+  </body>
+</html>

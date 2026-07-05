@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input</title>
+  </head>
+  <body>
+    <h1>Inputs no HTML</h1>
+
+    <form action="">
+      <!-- Campo de texto -->
+      <label for="nome">Nome: </label>
+      <input
+        type="text"
+        name="nome"
+        id="nome"
+        placeholder="Insira seu nome"
+        required
+      />
+      <hr />
+
+      <!-- Campo de e-mail -->
+      <label for="e-mail">email:</label>
+      <input
+        type="email"
+        name="e-mail"
+        id="e-mail"
+        placeholder="Insira seu email"
+        required
+      />
+      <hr />
+
+      <!-- Campo de senha -->
+      <label for="senha">Insira sua senha:</label>
+      <input
+        type="password"
+        name="senha"
+        id="senha"
+        placeholder="Insira sua senha"
+        required
+      />
+      <hr />
+
+      <!-- Campo de seleção radio -->
+      <label>Gênero</label><br />
+      <label for="masculino">Masculino</label>
+      <input type="radio" name="genero" id="masculino" value="m" />
+
+      <label for="feminino">Feminino</label>
+      <input type="radio" name="genero" id="feminino" value="f" />
+      <hr />
+
+      <!-- Campo de seleção múltipla (checkbox) -->
+      <label>Interesses</label> <br />
+      <label for="backend">Back-end</label>
+      <input type="checkbox" name="intereses" id="backend" value="backend" />
+
+      <label for="frontend">front-end</label>
+      <input type="checkbox" name="Interesses" id="frontend" value="frontend" />
+
+      <label for="mobile">mobile</label>
+      <input type="checkbox" name="Interesses" id="mobile" value="mobile" />
+      <hr />
+
+      <!-- Campo de data -->
+      <label for="dataDeNasicmento">Data de nacimento</label><br />
+      <input type="date" name="dataDeNasicmento" id="dataDeNasicmento" />
+      <hr />
+
+      <!-- Campo de Arquivo -->
+      <label for="upload">Envie o seu arquivo</label> <br />
+      <input type="file" name="arquivo" id="upload" />
+      <hr />
+
+      <!-- Campo de caixa de opções -->
+      <label for="situacao">Situação Atual</label><br />
+      <select name="situacao" id="situacao">
+        <option value="" selected disabled>Selecione uma das opções</option>
+        <option value="estudante">
+          Estudando para me tornar um programador
+        </option>
+        <option value="estagiario">Atuando como um estagiário</option>
+        <option value="junior">Atuando como desenvolvedor junior</option>
+        <option value="pleno">Atuando como desenvolvedor pleno</option>
+        <option value="senior">Atuando como desenvolvedor senior</option>
+      </select>
+      <hr />
+
+      <!-- Campo de textarea -->
+      <label for="sobre">Sobre você</label> <br />
+      <textarea
+        name="sobre"
+        id="sobre"
+        cols="40"
+        rows="6"
+        placeholder="Insira um texto sobre você"
+      ></textarea>
+
+      <hr />
+      <button type="submit">Enviar</button>
+    </form>
+  </body>
+</html>
