@@ -17,36 +17,37 @@
 
 let vagas = [
   {
-    nome: "Desenvolvedor front-end",
+    nome: "Desenvolvedor Front-end",
     descricao: "Vaga para desenvolvedor front-end",
-    dataLimite: "05/02/2027",
-    candidatos: ["Gabriel", "Maria"],
+    dataLimite: "05/03/2027",
+    candidatos: ["Gabriel Pereira", "Maria Silva"],
   },
   {
     nome: "Desenvolvedor back-end",
     descricao: "Vaga para desenvolvedor back-end",
-    dataLimite: "05/02/2027",
-    candidatos: ["Pedro", "Adalto"],
+    dataLimite: "11/08/2027",
+    candidatos: ["Pedro", "Adalto", "Murillo"],
   },
 ];
 
 function listarVagas() {
   let vagasEmTexto = vagas.reduce(function (textoFinal, vaga, index) {
     textoFinal += `
-    ${index}. ${vaga.nome}. Candidatos inscritos: ${vaga.candidatos.length}`;
+    ${index}, ${vaga.nome}. Candidatos inscritos: ${vaga.candidatos.length}`;
+
     return textoFinal;
   }, "");
 
   alert(vagasEmTexto);
 }
 
-function cadastrarVaga() {
-  let nome = prompt("Informe o nome da vaga");
-  let descricao = prompt("Informe a descrição da vaga");
-  let dataLimite = prompt("Informe a data limite da vaga (dd/mm/aaa)");
+function criarVaga() {
+  let nome = prompt("Informe o nome da vaga.");
+  let descricao = prompt("Informe a descrição da vaga.");
+  let dataLimite = prompt("Informe a data limite da vaga. (dd/mm/aaa)");
 
   let confirmacao = confirm(`
-    Deseja criar uma vaga com as seguintes informações?
+    Deseja criar uma vaga com as seguintes características?
 
     -> Nome: ${nome}
     -> Descrição: ${descricao}
@@ -60,8 +61,9 @@ function cadastrarVaga() {
       dataLimite,
       candidatos: [],
     };
+
     vagas.push(novaVaga);
-    alert("Vaga criada.");
+    alert("Vaga criada com sucesso.");
   }
 }
 
@@ -73,7 +75,7 @@ function visualizarVaga() {
     textoFinal,
     candidato,
   ) {
-    textoFinal += `--> ${candidato}
+    textoFinal += `--> ${candidato}.
     `;
 
     return textoFinal;
@@ -91,38 +93,49 @@ function visualizarVaga() {
 }
 
 function inscreverCandidato() {
-  let nomeCandidato = prompt("Informe o nome do candidato.");
+  let nome = prompt("Informe o nome do candidato.");
   let index = prompt("Informe o índice da vaga.");
-  let vaga = vagas[index];
 
-  let confirmacao = confirm(`
-    Deseja inscrever o(a) candidato(a) ${nomeCandidato} na vaga abaixo?
-
-    -> Nome: ${vaga.nome}
-    -> Descrição: ${vaga.descricao}
-    -> Data limite: ${vaga.dataLimite}
-    -> Número de candidatos inscritos: ${vaga.candidatos.length}
-    `);
-
-  if (confirmacao) {
-    vaga.candidatos.push(nomeCandidato);
-    alert(`
-        O(a) candidato(a) ${nomeCandidato} foi inscrto na vaga abaixo:
-
-        ${vaga.nome}
-        `);
-  }
-}
-
-function excluirVaga() {
-  let index = prompt("Informe o índice da vaga a ser excluída.");
   let vaga = vagas[index];
 
   let candidatosEmTexto = vaga.candidatos.reduce(function (
     textoFinal,
     candidato,
   ) {
-    textoFinal += `--> ${candidato}
+    textoFinal += `--> ${candidato}.
+    `;
+
+    return textoFinal;
+  }, "");
+
+  let confirmacao = confirm(`
+    Deseja inscrever o candidato ${nome} na vaga abaixo?
+
+    -> Nome: ${vaga.nome}
+    -> Descrição: ${vaga.descricao}
+    -> Data limite: ${vaga.dataLimite}
+    -> Candidatos inscritos:
+    ${candidatosEmTexto}
+    `);
+
+  if (confirmacao) {
+    vaga.candidatos.push(nome);
+    alert(`
+        O candidato ${nome} foi inscrito na vaga ${vaga.nome}!
+        `);
+  }
+}
+
+function excluirVaga() {
+  let index = prompt("Informe o índice da vaga.");
+
+  let vaga = vagas[index];
+
+  let candidatosEmTexto = vaga.candidatos.reduce(function (
+    textoFinal,
+    candidato,
+  ) {
+    textoFinal += `--> ${candidato}.
     `;
 
     return textoFinal;
@@ -131,30 +144,31 @@ function excluirVaga() {
   let confirmacao = confirm(`
     Deseja excluir a vaga abaixo?
 
-    -> Nome ${vaga.nome}
+    -> Nome: ${vaga.nome}
     -> Descrição: ${vaga.descricao}
     -> Data limite: ${vaga.dataLimite}
-    -> Candidatos inscritos: 
+    -> Candidatos inscritos:
     ${candidatosEmTexto}
     `);
 
-    if (confirmacao) {
-      vagas.splice(index, 1)
-      alert("Vaga excluída.")
-    }
+  if (confirmacao) {
+    vagas.splice(index, 1);
+    alert("Vaga excluída com sucesso.");
+  }
 }
 
+let escolha = "";
+
 function executar() {
-  let escolha = "";
   do {
     escolha = prompt(`
-    Seja muito bem-vindo ao sistema de vagss de emprego!
-
+    Seja muito bem-vindo ao sistema de vagas de emprego!
     Escolha uma das opções abaixo:
-    -> 1: Listar vagas.
-    -> 2: Cadastrar nova vaga.
-    -> 3: Visualizar vaga.
-    -> 4: Inscrever um candidato para uma vaga.
+
+    -> 1: Listar vagas disponíveis.
+    -> 2: Criar uma nova vaga.
+    -> 3: Exibir detalhes de uma vaga.
+    -> 4: Inscrever candidato em uma vaga.
     -> 5: Excluir uma vaga.
     -> 6: Sair.
     `);
@@ -165,7 +179,7 @@ function executar() {
         break;
 
       case "2":
-        cadastrarVaga();
+        criarVaga();
         break;
 
       case "3":
@@ -185,6 +199,7 @@ function executar() {
         break;
 
       default:
+        alert(`Opção inválida.`);
         break;
     }
   } while (escolha !== "6");

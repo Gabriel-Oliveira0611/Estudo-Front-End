@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.25rem;
+}
+
+.container {
+  width: 80%;
+  min-height: 900px;
+  margin: 20px auto;
+  border: 1px solid #333;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+/* Space between: Posiciona o primeiro filho no começo
+do conteiner, posiciona o ultimo filho ao final do
+conteiner, e aplica m espaço igual aos demais elementos
+entre o primeiro e o ultimo filho. */
+
+/* Space around: Garante que o espaçamento entre os elementos
+será sempre maior que o espaçamento entre os ultimos filhos e
+o limite do conteiner */
+
+/* Space evenly: Aplica um espaço igual entre os filhso e os
+limites do conteiner */
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: #ccc;
+  margin: 20px;
+}

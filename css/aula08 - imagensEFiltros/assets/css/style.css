@@ -1,0 +1,17 @@
+body {
+  font-family: "Montserrat";
+  text-align: center;
+}
+
+img {
+  width: 80%;
+  /* border-radius: 10px 50px 90px 140px; */
+  border-radius: 10px;
+  /* filter: blur(2px); */
+  /* filter: brightness(20%); */
+  /* filter: opacity(5%); */
+  /* filter: saturate(20%); */
+  /* filter: contrast(140%); */
+  /* filter: drop-shadow(20px 40px 50px #ccc); */
+  filter: grayscale(50%);
+}

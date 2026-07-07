@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat";
+}
+
+/* p::first-line {
+    background-color: #dc143c;
+    color: #fff;
+    font-weight: 900;
+    font-size: 30px;
+} */
+
+p::selection {
+  background-color: #dc143c;
+  color: #fff;
+  font-weight: 700;
+}
+
+.box {
+    background-color: #f2f2f2;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    box-shadow: 1px 1px 30px #a3a3a3 ;
+    width: 400px;
+    min-height: 250px;
+    text-align: center;
+    padding: 20px;
+}
+
+.box::before {
+    content: "Conteúdo desejado";
+    background-color: #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.box::after {
+    content: "Conteúdo desejado";
+    background-color: #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}

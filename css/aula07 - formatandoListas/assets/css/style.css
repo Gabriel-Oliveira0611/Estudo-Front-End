@@ -1,0 +1,19 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+ol {
+  list-style: lower-roman;
+}
+
+ul {
+  /* list-style: disc; */
+  /* list-style: circle; */
+  /* list-style: square; */
+  list-style: url(../images/css-3.png);
+}
+
+ul,
+ol {
+  list-style: none;
+}

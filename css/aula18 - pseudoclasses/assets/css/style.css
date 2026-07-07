@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat";
+}
+
+/* li {
+  margin: 20px 0;
+}
+
+li:hover {
+  width: 300px;
+  height: 50px;
+  background-color: #dc143c;
+  color: #fff;
+} */
+
+.box {
+  border: 1px solid #dc143c;
+  width: 150px;
+  height: 50px;
+  border-radius: 7px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* Seletor ímpar */
+/* .box:nth-child(odd) {
+    background-color: #dc143c;
+    color: #fff;
+} */
+
+/* Seletor par */
+/* .box:nth-child(even) {
+  background-color: #dc143c;
+  color: #fff;
+} */
+
+/* Primeiro filho */
+/* .box:first-child {
+  background-color: #dc143c;
+  color: #fff;
+} */
+
+/* último filho */
+/* .box:last-child {
+  background-color: #369;
+  color: #fff;
+} */
+
+/* Seletor NOT: Todos os que retormarem verdadeiro para a condição, serão formatados */
+/* .box:not(.no-color) {
+  background-color: #dc143c;
+  color: #fff;
+} */
+
+/* :is(.bg-color, h2, h3, h4) {
+  background-color: #dc143c;
+  color: #fff;
+} */
+
+/* O seletor h4 perde em especificidado para o IS */
+/* h4 {
+  background-color: rgb(63, 15, 75);
+}
+
+:where(.bg-color, h2, h3, h4) {
+  background-color: #dc143c;
+  color: #fff;
+}
+
+h4 {
+  background-color: rgb(63, 15, 75);
+} */
+
+.box:has(p) {
+    background-color: #dc143c;
+    color: #fff;
+}

@@ -1,0 +1,15 @@
+#rgb {
+  color: rgb(3, 31, 121);
+}
+
+#hexadecimal {
+  color: #9b0505;
+}
+
+#hsl {
+    color: hsl(200, 87%, 35%);
+}
+
+#hwb {
+    color: hwb(117 2% 56%);
+}

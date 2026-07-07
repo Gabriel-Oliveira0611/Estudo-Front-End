@@ -1,0 +1,19 @@
+body {
+    font-family: 'Montserrat';
+}
+
+div {
+    width: 300px;
+    height: 250px;
+    background-color: #ccc;
+    /* margin: 20px 60px 80px 230px; */
+    margin-top: 20px;
+    /* border-width: 10px; */
+    /* border-style: solid; */
+    /* border-color: #dc143c; */
+
+    border: 10px solid #dc143c;
+
+    padding: 20px;
+    box-sizing: border-box;
+}

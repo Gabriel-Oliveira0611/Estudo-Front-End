@@ -1,0 +1,48 @@
+body {
+  font-family: "Montserrat";
+  box-sizing: border-box;
+}
+
+div {
+  width: 90%;
+  height: 500px;
+  margin: 10px auto;
+  padding: 30px 0;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
+    url(../images/pexels-cottonbro-8721318.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 7px;
+}
+
+div h1 {
+    font-size: 45px;
+    margin: 50px 30px;
+    color: #fff;
+}
+
+div p {
+    margin: 30px 30px 60px;
+    width: 40%;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 700;
+}
+
+div a {
+    margin: 30px;
+    text-decoration: none;
+    border: 2px solid rgb(82, 147, 211);
+    background-color: rgb(81, 147, 211);
+    color: #fff;
+    padding: 8px 30px;
+    border-radius: 7px;
+    font-weight: 600;
+}
+
+div a:hover {
+    background-color: transparent;
+    color: rgb(81, 147, 211);
+}

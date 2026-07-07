@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.25rem;
+}
+
+.box {
+  width: 200px;
+  height: 150px;
+  background-color: #ccc;
+  margin: 10px;
+  display: block;
+  float: right;
+}
+
+/* Display block faz com que o elemento ocupe toda a largura disponível em uma linha
+impedindo que outros elementos fiquem ao seu lado. Ao mesmo tempo, é possível alterar
+suas medidas de largura e altura. */
+
+/* Display inline irá permitir que outroas elementos fiquem ao lado do elemento formatado,
+mas ao mesmo  tempo, não será possível alterar suas medidas de largura e altura. As mesmas
+serão proporcionais a quantidade de conteúdo. */
+
+/* Display inline-bloc é um meio-termo. Ele possibilita posicionar elementos ao lado
+do elemento formatado, ao mesmo tempo que nos permite alterar suas medidas de altura e 
+largura. */

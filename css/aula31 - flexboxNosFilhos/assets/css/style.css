@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.25rem;
+}
+
+.container {
+  border: 1px solid #aaa;
+  width: 80%;
+  margin: 10px auto;
+  min-height: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 150px;
+}
+
+.box {
+  width: 200px;
+  height: 250px;
+  background-color: #ccc;
+  padding: 10px;
+}
+
+
+
+/* Flex grow irá decidir o comportamento dos itens em questão
+de crescimento dentro do container flex pai. A partir do
+momento em que definimos grow como 1, o ite irá preencher
+todo o espaço livre dentro do container pai. Se o container
+pai tem 800 px, e temos 4 divs com 100 px cada uma, sobram 
+400px de espaço. Se eu coloco flwx grow 1 em uma das divs,
+ela irá ocupar o espaço faltante de 400 px, somando então 
+500 px (100px iniciais e 400 que sobravam. 
+
+Quando defino um número maior do que 1 no flex grow, ele irá
+pegar o espaço TOTAL do container e irá dividir igualmente na
+somatoria de cada flex grow. Exemplo:
+
+1 - flex grow 1
+2 - flex grow 3
+3 - flex grow 1
+
+Nessa divisão, o espaço de 800px do container irá ser dividido
+e 5 vezes, pois 1 + 3 + 1 é igual a 5.
+Nessa divisão, o item 2 irá receber 3 partes dessa divisão
+como medida de cescimento, já as demais irão receber
+1 parte.*/

@@ -1,0 +1,32 @@
+body {
+  font-family: "Montserrat";
+  background-image: url(../images/C360_2012-11-19-17-59-02.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  background-color: #248030;
+  color: #fff;
+  border-radius: 5px;
+}
+
+main {
+  background-color: #ffff8c;
+  border-radius: 5px;
+}
+
+a {
+  color: #248030;
+}
+
+button {
+  background-color: #248030;
+  border-radius: 5px;
+  border: none;
+}
+
+footer {
+  background-color: #fff;
+  border-radius: 5px;
+}
