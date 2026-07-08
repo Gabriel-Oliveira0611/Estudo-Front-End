@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.25rem;
+}
+
+.container {
+  background-color: rgb(129, 193, 237);
+  width: 80%;
+  min-height: 600px;
+  margin: 150px auto;
+  position: relative;
+}
+
+.box {
+  background-color: #ccc;
+  width: 250px;
+  height: 250px;
+  position: relative;
+  top: 50px;
+  left: 100px;
+}
+
+/* Position relative nos permite administrar o posicionamento do 
+elemento usando top, left, bottom ou riht. O posicionamento é feito
+com base no seu elemento pai. */
+
+/* Position absolute nos permite administrar o posicionamento do 
+elemento usando top, left, bottom ou riht. O posicionamento é feito
+com base no seu elemento pai. Mas caso o elemento pai não tenha um 
+position diferente de static, o elemento com position absolute
+irá se mover conforme o body. */
+
+.menu {
+  text-align: center;
+  padding: 20px;
+  background-color: #dc143c;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}

@@ -1,39 +1,22 @@
-// Sistema de Vagas de Emprego
-// Escreva um programa em javascript que simule um sistema de vagas de emprego, onde é possível gerenciar as vagas e adicionar candidatos às vagas. Ele deve atender aos seguintes requisitos:
-
-// Ter um um menu onde é possível escolher entre as diferentes funcionalidades do sistema
-// Listar vagas disponíveis
-// Criar um nova vaga
-// Visualizar uma vaga
-// Inscrever um candidato em uma vaga
-// Excluir uma vaga
-// Sair
-// A opção de listar as vagas deve mostrar o índice, o nome e a quantidade de candidatos inscritos de todas as vagas.
-// A opção de criar uma nova vaga deve pedir um nome para a vaga, uma descrição e uma data limite, e também deve pedir que o usuário confirme as informações antes de salvá-las.
-// A opção de visualizar uma vaga deve pedir o índice da vaga e mostrar todas as informações dela: índice, nome, descrição, data limite, quantidade de candidatos e o nome dos candidatos.
-// A opção de inscrever um candidato em uma vaga de pedir o nome do candidato, o índice da vaga e então uma confirmação exibindo as informações da vaga antes de salvar o candidato na vaga.
-// A opção de excluir uma vaga deve pedir o índice da vaga, mostrar suas informações e pedir que o usuário confirme a exclusão da vaga antes de realmente exclui-la.
-// Este é o exercício de revisão do módulo, então aproveite para utilizar todos os recursos vistos até agora sempre que possível, como os objetos, arrays e funções.
-
 let vagas = [
   {
     nome: "Desenvolvedor Front-end",
     descricao: "Vaga para desenvolvedor front-end",
-    dataLimite: "05/03/2027",
-    candidatos: ["Gabriel Pereira", "Maria Silva"],
+    dataLimite: "20/09/2026",
+    candidatos: ["Gabriel", "Maria"],
   },
   {
     nome: "Desenvolvedor back-end",
     descricao: "Vaga para desenvolvedor back-end",
-    dataLimite: "11/08/2027",
-    candidatos: ["Pedro", "Adalto", "Murillo"],
+    dataLimite: "20/08/2026",
+    candidatos: ["Pedro", "Adalto"],
   },
 ];
 
 function listarVagas() {
   let vagasEmTexto = vagas.reduce(function (textoFinal, vaga, index) {
     textoFinal += `
-    ${index}, ${vaga.nome}. Candidatos inscritos: ${vaga.candidatos.length}`;
+    ${index}. ${vaga.nome}. Candidatos inscritos: ${vaga.candidatos.length}`;
 
     return textoFinal;
   }, "");
@@ -47,7 +30,7 @@ function criarVaga() {
   let dataLimite = prompt("Informe a data limite da vaga. (dd/mm/aaa)");
 
   let confirmacao = confirm(`
-    Deseja criar uma vaga com as seguintes características?
+    Deseja criar uma vaga com as seguintes informações?
 
     -> Nome: ${nome}
     -> Descrição: ${descricao}
@@ -75,67 +58,63 @@ function visualizarVaga() {
     textoFinal,
     candidato,
   ) {
-    textoFinal += `--> ${candidato}.
+    textoFinal += `--> ${candidato}
     `;
 
     return textoFinal;
   }, "");
 
   alert(`
-    Segue abaixo os dados da vaga:
+    Segue abaixo os dados da vaga selecionada:
 
     -> Nome: ${vaga.nome}
     -> Descrição: ${vaga.descricao}
     -> Data limite: ${vaga.dataLimite}
-    -> Candidatos inscritos:
+    -> Candidatos:
     ${candidatosEmTexto}
     `);
 }
 
 function inscreverCandidato() {
   let nome = prompt("Informe o nome do candidato.");
-  let index = prompt("Informe o índice da vaga.");
+  let index = prompt("Informe o índice da vaga desejada.");
 
   let vaga = vagas[index];
-
-  let candidatosEmTexto = vaga.candidatos.reduce(function (
+  let candidatosEmtexto = vaga.candidatos.reduce(function (
     textoFinal,
     candidato,
   ) {
-    textoFinal += `--> ${candidato}.
+    textoFinal += `--> ${candidato}
     `;
 
     return textoFinal;
   }, "");
 
   let confirmacao = confirm(`
-    Deseja inscrever o candidato ${nome} na vaga abaixo?
+    Deseja inscrever o(a) candidato(a) ${nome} na vaga abaixo?
 
-    -> Nome: ${vaga.nome}
+    -> Nome da vaga: ${vaga.nome}
     -> Descrição: ${vaga.descricao}
     -> Data limite: ${vaga.dataLimite}
     -> Candidatos inscritos:
-    ${candidatosEmTexto}
+    ${candidatosEmtexto}
     `);
 
   if (confirmacao) {
     vaga.candidatos.push(nome);
-    alert(`
-        O candidato ${nome} foi inscrito na vaga ${vaga.nome}!
-        `);
+    alert("Candidato(a) inscrito com sucesso!");
   }
 }
 
 function excluirVaga() {
-  let index = prompt("Informe o índice da vaga.");
-
+  let index = prompt("Informe o índice a vaga a ser excluída.");
   let vaga = vagas[index];
 
   let candidatosEmTexto = vaga.candidatos.reduce(function (
     textoFinal,
     candidato,
   ) {
-    textoFinal += `--> ${candidato}.
+    textoFinal += `--> ${candidato}
     `;
 
     return textoFinal;
@@ -157,18 +136,17 @@ function excluirVaga() {
   }
 }
 
-let escolha = "";
-
 function executar() {
+  let escolha = "";
   do {
     escolha = prompt(`
     Seja muito bem-vindo ao sistema de vagas de emprego!
     Escolha uma das opções abaixo:
 
-    -> 1: Listar vagas disponíveis.
-    -> 2: Criar uma nova vaga.
+    -> 1: Listar vagas diponíveis.
+    -> 2: Criar nova vaga.
     -> 3: Exibir detalhes de uma vaga.
-    -> 4: Inscrever candidato em uma vaga.
+    -> 4: Inscrever um candidato em uma vaga.
     -> 5: Excluir uma vaga.
     -> 6: Sair.
     `);
@@ -199,10 +177,10 @@ function executar() {
         break;
 
       default:
-        alert(`Opção inválida.`);
+        alert("Opção inválida.");
         break;
     }
   } while (escolha !== "6");
 }
 
-executar();
+executar()
