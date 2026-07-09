@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.25rem;
+  background-color: #2c2c2d;
+  color: #fff;
+}
+
+.box {
+  background-color: #4547c7;
+  height: 10rem;
+  width: 10rem;
+  border: 2px solid #272727;
+}
+
+.box.red {
+  background-color: #ff665c;
+}
+
+.box.yellow {
+  background-color: #f9ff58;
+  height: 20rem;
+}
+
+.box.blue {
+  background-color: #5255eb;
+  height: 15rem;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}

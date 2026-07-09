@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.25rem;
+  background-color: #272727;
+  color: #fff;
+}
+
+.flex-container {
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+
+.flex-item {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 15rem;
+}
+
+/* Estilos auxiliares */
+
+.box {
+  background-color: #4547c7;
+  border: 2px solid #272727;
+  min-height: 10rem;
+  min-width: 10rem;
+}
+
+.box.red {
+  background-color: #ff665c;
+}
+
+.box.yellow {
+  background-color: #f9ff58;
+  height: 20rem;
+}
+
+.box.blue {
+  background-color: #5255eb;
+  height: 20rem;
+}

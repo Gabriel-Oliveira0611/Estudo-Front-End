@@ -1,14 +1,14 @@
 let vagas = [
   {
-    nome: "Desenvolvedor Front-end",
-    descricao: "Vaga para desenvolvedor front-end",
-    dataLimite: "20/09/2026",
+    nome: "Desenvolvedor front-end",
+    descricao: "Vaga para desenvolvedor Front-end",
+    dataLimite: "08/08/2026",
     candidatos: ["Gabriel", "Maria"],
   },
   {
     nome: "Desenvolvedor back-end",
     descricao: "Vaga para desenvolvedor back-end",
-    dataLimite: "20/08/2026",
+    dataLimite: "08/08/2026",
     candidatos: ["Pedro", "Adalto"],
   },
 ];
@@ -16,7 +16,7 @@ let vagas = [
 function listarVagas() {
   let vagasEmTexto = vagas.reduce(function (textoFinal, vaga, index) {
     textoFinal += `
-    ${index}. ${vaga.nome}. Candidatos inscritos: ${vaga.candidatos.length}`;
+    ${index} - ${vaga.nome}. Candidatos inscritos: ${vaga.candidatos.length}`;
 
     return textoFinal;
   }, "");
@@ -47,11 +47,24 @@ function criarVaga() {
 
     vagas.push(novaVaga);
     alert("Vaga criada com sucesso.");
+  } else {
+    alert("A vaga não foi criada.");
   }
 }
 
 function visualizarVaga() {
-  let index = prompt("Informe o índice da vaga.");
+  let vagasEmTexto = vagas.reduce(function (textoFinal, vaga, index) {
+    textoFinal += `${index} - ${vaga.nome}.
+    `;
+
+    return textoFinal;
+  }, "");
+
+  let index = prompt(`
+    Informe o índice da vaga.
+
+    ${vagasEmTexto}
+    `);
   let vaga = vagas[index];
 
   let candidatosEmTexto = vaga.candidatos.reduce(function (
@@ -65,30 +78,31 @@ function visualizarVaga() {
   }, "");
 
   alert(`
-    Segue abaixo os dados da vaga selecionada:
+    Segue abaixo as informações da vaga.
 
     -> Nome: ${vaga.nome}
     -> Descrição: ${vaga.descricao}
     -> Data limite: ${vaga.dataLimite}
-    -> Candidatos:
+    -> Candidatos inscritos: 
     ${candidatosEmTexto}
     `);
 }
 
 function inscreverCandidato() {
-  let nome = prompt("Informe o nome do candidato.");
-  let index = prompt("Informe o índice da vaga desejada.");
-
-  let vaga = vagas[index];
-  let candidatosEmtexto = vaga.candidatos.reduce(function (
-    textoFinal,
-    candidato,
-  ) {
-    textoFinal += `--> ${candidato}
+  let vagasEmTexto = vagas.reduce(function (textoFinal, vaga, index) {
+    textoFinal += `${index} - ${vaga.nome}.
     `;
 
     return textoFinal;
   }, "");
+
+  let nome = prompt("Informe o nome do candidato.");
+  let index = prompt(`
+    Informe o índice da vaga.
+
+    ${vagasEmTexto}
+    `);
+  let vaga = vagas[index];
 
   let confirmacao = confirm(`
     Deseja inscrever o(a) candidato(a) ${nome} na vaga abaixo?
@@ -96,18 +110,31 @@ function inscreverCandidato() {
     -> Nome da vaga: ${vaga.nome}
     -> Descrição: ${vaga.descricao}
     -> Data limite: ${vaga.dataLimite}
-    -> Candidatos inscritos:
-    ${candidatosEmtexto}
+    -> Candidatos inscritos: ${vaga.candidatos.length}
     `);
 
   if (confirmacao) {
     vaga.candidatos.push(nome);
-    alert("Candidato(a) inscrito com sucesso!");
+    alert(`Candidato(a) inscrito(a) com sucesso.`);
+  } else {
+    alert(`O(A) candidato(a) não foi inscrito(a).`);
   }
 }
 
 function excluirVaga() {
-  let index = prompt("Informe o índice a vaga a ser excluída.");
+  let vagasEmTexto = vagas.reduce(function (textoFinal, vaga, index) {
+    textoFinal += `${index} - ${vaga.nome}.
+    `;
+
+    return textoFinal;
+  }, "");
+
+  let index = prompt(`
+    Informe o índice da vaga a ser deletada:
+
+    ${vagasEmTexto}
+    `);
+
   let vaga = vagas[index];
 
   let candidatosEmTexto = vaga.candidatos.reduce(function (
@@ -132,7 +159,9 @@ function excluirVaga() {
 
   if (confirmacao) {
     vagas.splice(index, 1);
-    alert("Vaga excluída com sucesso.");
+    alert("A vaga foi excluída.");
+  } else {
+    alert("A vaga não foi excluída.");
   }
 }
 
@@ -143,12 +172,12 @@ function executar() {
     Seja muito bem-vindo ao sistema de vagas de emprego!
     Escolha uma das opções abaixo:
 
-    -> 1: Listar vagas diponíveis.
-    -> 2: Criar nova vaga.
+    -> 1: Listar vagas disponíveis.
+    -> 2: Criar uma vaga.
     -> 3: Exibir detalhes de uma vaga.
     -> 4: Inscrever um candidato em uma vaga.
     -> 5: Excluir uma vaga.
-    -> 6: Sair.
+    -> 6: Sair
     `);
 
     switch (escolha) {
@@ -173,7 +202,7 @@ function executar() {
         break;
 
       case "6":
-        alert("Encerrando o sistema...");
+        alert("Enxerrando o sistema...");
         break;
 
       default:
@@ -183,4 +212,4 @@ function executar() {
   } while (escolha !== "6");
 }
 
-executar()
+executar();

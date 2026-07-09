@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --color-white: #fff;
+  --color-primary: #fb5363;
+  --color-black: #000;
+  --transitions: 0.5s;
+}
+
+body {
+  font-size: 1.25rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-white);
+  padding: 1.8rem 3rem;
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+
+header a {
+  text-decoration: none;
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+header nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.call-to-action {
+  display: flex;
+  gap: 2rem;
+  align-content: center;
+}
+
+.call-to-action a {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-decoration: none;
+  padding: 1rem 3rem;
+  border-radius: 5px;
+  font-weight: 500;
+  border: 2px solid var(--color-primary);
+}
+
+.call-to-action a:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  box-shadow: 1px 1px 10px var(--color-black);
+  transition: var(--transitions);
+}
+
+main {
+  background-image: url(../images/hero-background.jpg);
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main h2 {
+  margin-bottom: 2rem;
+  font-size: 6rem;
+  color: var(--color-primary);
+  text-shadow: 1px 1px 10px var(--color-black);
+}
+
+footer {
+  position: fixed;
+  z-index: 5;
+  bottom: 0;
+  right: 0;
+  padding: 1.5rem;
+  background-color: var(--color-black);
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+footer nav {
+  display: flex;
+  gap: 1.5rem;
+}
