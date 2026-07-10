@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.25rem;
+  background-color: #1c1a1d;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  header,
+  section {
+    padding: 0.25rem 2rem;
+    text-align: center;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  header, section {
+    padding: 2rem 8rem;
+  }
+
+  .mobile-only {
+    display:none
+  }
+}
+
+.products {
+  display: grid;
+  gap: 1rem;
+}
+
+.product {
+  background-color: #fff;
+  color: #000;
+  padding: 1rem 1.75rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
