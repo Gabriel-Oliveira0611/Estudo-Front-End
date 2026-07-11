@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Link Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Link CDN Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Exercício 09</title>
+  </head>
+  <body>
+    <!-- Container princpial -->
+    <div class="container">
+      <!-- imagem e título -->
+      <div class="box">
+        <h2>Crie sua conta</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet
+          obcaecati eius, maxime quam repellendus numquam nobis dolor aperiam.
+          Nemo magni necessitatibus voluptatibus ducimus, quidem ullam voluptas
+          enim? Odit, ducimus recusandae?
+        </p>
+        <img
+          src="./assets/images/coding-29.png"
+          alt="imagem de alguem codando"
+        />
+      </div>
+
+      <!-- Formulário -->
+      <div class="box">
+        <h2>Preencha seus dados</h2>
+
+        <!-- Estoque de icones
+           
+          Nome: 
+          <i class="fa-solid fa-user"></i>
+
+          Sobrenome: 
+          <i class="fa-regular fa-user"></i>
+
+          Usuário:
+          <i class="fa-solid fa-user-secret"></i>
+
+          Senha: 
+          <i class="fa-solid fa-key"></i>
+
+          Email: 
+          <i class="fa-solid fa-envelope"></i>
+
+          Data de nascimento:
+          <i class="fa-solid fa-cake-candles"></i>
+
+
+          -->
+
+        <form action="" id="dados" name="dados" method="post" class="form">
+          <div class="box-form-item">
+            <label for="name">Nome:</label>
+            <i class="fa-solid fa-user icon"></i>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="fulano"
+              required
+            />
+          </div>
+
+          <div class="box-form-item">
+            <label for="lastName">Sobrenome:</label>
+            <i class="fa-regular fa-user icon"></i>
+            <input
+              type="text"
+              name="lastName"
+              id="lastName"
+              placeholder="de tal"
+              required
+            />
+          </div>
+
+          <div class="box-form-item">
+            <label for="userName">Usuário:</label>
+            <i class="fa-solid fa-user-secret icon"></i>
+            <input
+              type="text"
+              name="userName"
+              id="userName"
+              placeholder="usuario123"
+              required
+            />
+          </div>
+
+          <div class="box-form-item">
+            <label for="password">Senha:</label>
+            <i class="fa-solid fa-key icon"></i>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="xxxx"
+              required
+            />
+          </div>
+
+          <div class="box-form-item">
+            <label for="email">Email:</label>
+            <i class="fa-solid fa-envelope icon"></i>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="xxx@email.com"
+              required
+            />
+          </div>
+
+          <div class="box-form-item">
+            <label for="birthday">Data de Nascimento:</label>
+            <i class="fa-solid fa-cake-candles icon"></i>
+            <input type="date" name="birthday" id="birthday" required />
+          </div>
+
+          <div class="box-form-item">
+            <label for="">Tipo de conta:</label>
+
+            <div class="box-form-radio">
+              <div class="radio">
+                <input type="radio" name="account" id="free" />
+                <label for="free">Free</label>
+              </div>
+
+              <div class="radio">
+                <input type="radio" name="account" id="gold" />
+                <label for="gold">Gold</label>
+              </div>
+
+              <div class="radio">
+                <input type="radio" name="account" id="premium" />
+                <label for="premium">Premium</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="box-form-item">
+            <label for="atuacao" class="select">Área de atuação</label>
+            <select name="atuacao" id="atuacao">
+              <option value="0" disabled selected>Selecione a sua opção</option>
+              <option value="1">Área 1</option>
+              <option value="2">Área 2</option>
+              <option value="3">Área 3</option>
+              <option value="4">Área 4</option>
+            </select>
+          </div>
+
+          <div class="box-form-button">
+            <button type="submit">
+              Criar conta <i class="fa-solid fa-circle-chevron-right arrow"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

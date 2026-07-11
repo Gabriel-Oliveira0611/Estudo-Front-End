@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.25rem;
+  background-color: #60ffa5;
+}
+
+.products {
+  display: grid;
+  gap: 1rem;
+}
+
+.product {
+  background-color: #fff;
+  color: #000;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 1rem 1.75rem 1.5rem;
+}
+
+header,
+section {
+  padding: 0.25rem 2rem;
+  text-align: center;
+}
+
+.desktop-only {
+  display: none;
+}
+
+@media screen and (min-width: 769px) {
+  header,
+  section {
+    padding: 2rem 8rem;
+  }
+
+  .mobile-only {
+    display: none;
+  }
+
+  .desktop-only {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 40rem) {
+  .products {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .products {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Preferências de cor */
+
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    background-color: #1c1a1d;
+    color: #fff;
+  }
+
+  .product {
+    background-color: #2c2c2d;
+    color: #fff;
+  }
+}
+
+@media screen and (prefers-color-scheme: light) {
+  body {
+    background-color: #e0e0e0;
+    color: #2c2c2d;
+  }
+
+  .product {
+    background-color: #fff;
+    color: #000;
+  }
+}
