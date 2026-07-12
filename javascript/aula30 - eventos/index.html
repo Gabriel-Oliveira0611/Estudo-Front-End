@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Link Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Link CDN Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Eventos no HTML</title>
+  </head>
+  <body>
+    <h1>Eventos no HTML</h1>
+    <div>
+      <label for="onMouseEnter">Entrada do Mouse</label>
+      <input
+        type="text"
+        name="onMouseEnter"
+        id="onMouseEnter"
+        onmouseenter="onMouseEnter()"
+      />
+    </div>
+    <br />
+    <div>
+      <label for="onChange">Mudança de Valor</label>
+      <input
+        type="text"
+        name="onChange"
+        id="onChange"
+        onchange="console.log('mudança no valor')"
+      />
+    </div>
+    <br />
+    <div>
+      <label for="onFocus">Entrada de foco</label>
+      <input
+        type="text"
+        name="onFocus"
+        id="onFocus"
+        onfocus="console.log('foco no elemento')"
+      />
+    </div>
+    <br />
+    <div>
+      <label for="onBlur">Saída de Foco</label>
+      <input
+        type="text"
+        name="onBlur"
+        id="onBlur"
+        onblur="console.log('desfocado o elemento')"
+      />
+    </div>
+    <br />
+    <button onclick="onClick()">Click me!</button>
+
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>

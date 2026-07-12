@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Link Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Link CDN Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Exercício 11</title>
+  </head>
+  <body>
+    <main>
+      <section class="hero-section">
+        <h1 id="hero-title">Future Tech Conference 2024</h1>
+        <p id="hero-text">
+          Join the leading voices in AI, Cloud Compuing and Web Development
+        </p>
+        <a href="#" class="cta-btn">Register Now</a>
+      </section>
+
+      <section class="speakers-section">
+        <h2 id="speakers-title">Our Speakers</h2>
+        <div class="speakers-grid">
+          <article class="speaker">
+            <img src="./assets/images/speaker-1.jpg" alt="speaker one" />
+            <h3 class="speaker-name">DR. Jane Doe</h3>
+            <p class="speaker-desc">AI Specialist at TechCorp</p>
+          </article>
+
+          <article class="speaker">
+            <img src="./assets/images/speaker-2.jpg" alt="speaker two" />
+            <h3 class="speaker-name">John Smith</h3>
+            <p class="speaker-desc">Cloud Architect at CloudNet</p>
+          </article>
+
+          <article class="speaker">
+            <img src="./assets/images/speaker-3.jpg" alt="speaker three" />
+            <h3 class="speaker-name">Sara Lee</h3>
+            <p class="speaker-desc">Full Stack Developer at WebWorks</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="schedule">
+        <h2 id="schedule-title">Event Schedule</h2>
+        <div class="events-grid">
+          <article class="event">
+            <h3 class="event-title">09:00 AM - Opening Keynote</h3>
+            <p class="event-desc">Dr. Jane Doe: "The Future of AI</p>
+          </article>
+
+          <article class="event">
+            <h3 class="event-title">11:00 AM - Cloud Computing Trends</h3>
+            <p class="event-desc">John Smith & Panelists</p>
+          </article>
+
+          <article class="event">
+            <h3 class="event-title">02:00 PM - Building Scalable Web Apps</h3>
+            <p class="event-desc">Sara Lee</p>
+          </article>
+
+          <article class="event">
+            <h3 class="event-title">04:00 PM - Closing Remarks</h3>
+            <p class="event-desc">Tech Innovations Beyond 2024</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="newsletter-grid">
+        <div class="news-img">
+          <img
+            src="./assets/images/undraw_subscribe_vspl.svg"
+            alt="Letter svg"
+          />
+        </div>
+
+        <div class="news-content">
+          <h2 class="form-title">Subscribe to Our Newsletter</h2>
+          <p class="form-text">
+            Stay updated with the latest event news, speaker announcements and
+            more!
+          </p>
+          <form action="" class="form" id="form" name="form" method="post">
+            <div class="form-field">
+              <label for="name">Full name:</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+
+            <button type="submit" class="cta-btn">Subscribe</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Future Tech Conference. All Rights Reserved.</p>
+      <a href="#" class="cta-btn">Register Now</a>
+    </footer>
+  </body>
+</html>
