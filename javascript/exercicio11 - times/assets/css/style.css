@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.25rem;
+  background-color: #1c1c1d;
+  color: #fff;
+  padding: 1rem;
+}
+
+h1 {
+  border-bottom: 1px solid #707070;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+#escalar, #remover {
+  border: 1px solid #fff;
+  padding: 2rem;
+  display: inline-block;
+}
