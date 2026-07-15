@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Link Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Link CDN Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- Link Javascript -->
+    <script src="./assets/js/index.js" defer></script>
+    <title>Formulários no Javascript</title>
+  </head>
+  <body>
+    <h1>Trabalhando com Formulários</h1>
+    <hr />
+
+    <h2>Montar Pedido</h2>
+    <form id="orderForm">
+      <label for="name">Nome:</label> <br />
+      <input type="text" name="name" id="name" />
+
+      <br /><br />
+
+      <label for="address">Endereço de entrega:</label> <br />
+      <input type="text" name="address" id="address" />
+
+      <br /><br />
+
+      <label for="tipoDePao">Tipo de pão:</label> <br />
+      <select name="tipoDePao" id="tipoDePao">
+        <option value="" selected disabled>Selecione uma opção</option>
+        <option value="frances">Pão francês</option>
+        <option value="doce">Pão doce</option>
+        <option value="forma">Pão de forma</option>
+        <option value="sovado">Pão sovado</option>
+      </select>
+
+      <br /><br />
+
+      <label>Principal:</label> <br />
+      <input type="radio" name="principal" id="carne" value="carne" />
+      <label for="carne">Carne</label>
+
+      <input type="radio" name="principal" id="frango" value="frango" />
+      <label for="frango">Frango</label>
+
+      <input type="radio" name="principal" id="vegano" value="vegano" />
+      <label for="vegano">Vegano</label>
+
+      <br /><br />
+
+      <label for="salada">Salada:</label> <br />
+      <input type="checkbox" name="salada" id="alface" value="alface" />
+      <label for="alface">Alface</label>
+
+      <input type="checkbox" name="salada" id="tomate" value="tomate" />
+      <label for="tomate">Tomate</label>
+
+      <input type="checkbox" name="salada" id="azeitonas" value="azeitonas" />
+      <label for="azeitonas">Azeitonas</label>
+
+      <input type="checkbox" name="salada" id="cenoura" value="cenoura" />
+      <label for="cenoura">Cenoura</label>
+
+      <input type="checkbox" name="salada" id="picles" value="picles" />
+      <label for="picles">Picles</label>
+
+      <br /><br />
+
+      <label for="obs">Oservações:</label> <br />
+      <textarea name="obs" id="obs"></textarea>
+
+      <br /><br />
+
+      <button type="submit">Fechar pedido</button>
+    </form>
+  </body>
+</html>

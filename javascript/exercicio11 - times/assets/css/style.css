@@ -14,6 +14,11 @@ body {
   background-color: #1c1c1d;
   color: #fff;
   padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
